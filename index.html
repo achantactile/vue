@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="js/vue.js"></script>
+	</head>
+<div id="app">
+	<button type ='submit' @click="count += 1">
+	like: {{count}}
+	</button>
+<pre>{{$data | json}}</pre>
+</div>
+<script>
+new Vue({
+	el: '#app',
+	data:{
+		count:0
+		},
+	methods:{
+		updateCount: function(){
+			this.count+=1;
+		}
+	}
+	
+});
+</script>
+
+</html>
